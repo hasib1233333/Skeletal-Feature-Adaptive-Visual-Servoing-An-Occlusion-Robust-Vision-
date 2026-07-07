@@ -1,1 +1,11 @@
-# Skeletal-Feature-Adaptive-Visual-Servoing-An-Occlusion-Robust-Vision-
+Title
+
+Skeletal-Feature Adaptive Visual Servoing: An Occlusion-Robust Vision-Control Framework for Robotic Manipulators
+
+Abstract
+
+Image-based visual servoing drives a robot toward a target using features tracked directly in the camera image, and the choice of feature matters more than most controllers admit. Centroid features are cheap but blind to rotation; corner or hull features carry full pose information but disappear or jump the moment a hand, cable, or passing object occludes them. This paper introduces SF-AIBVS, a visual servoing controller built on the target's morphological skeleton rather than its raw silhouette. Because a skeleton branch degrades in length as its corresponding part of the object is covered, rather than vanishing outright, the resulting position, scale, and orientation estimates stay usable well past the point where corner detectors lose track entirely. We pair this with a confidence gate: when the observed skeleton length falls far short of what the current scale estimate predicts, the controller freezes its output instead of acting on a corrupted reading, and resumes the instant the reading is trustworthy again. Across 360 simulated docking trials at three occlusion severities, the skeletal controller reached the target in all 90 trials; a classical centroid controller reached it in none, and a corner-based tracker reached it in 13 to 20 trials, diverging outright in up to 77% of heavy-occlusion attempts. Disabling the confidence gate does not change the success count, but it does make the control signal visibly rougher under heavy occlusion (a 19% increase in mean command-to-command variation, p = 0.007), so the gate's contribution is best described as a smoothness and safety property layered on top of an already robust feature choice, not a rescue mechanism for a fragile one. A sweep of the confidence threshold from 0.30 to 0.90 shows performance is stable across a wide plateau rather than dependent on a narrowly tuned value. All of this is evaluated in simulation on a single target shape with a reduced, four-parameter pose model and idealized segmentation, and we treat that scope, along with the corresponding need for real-camera validation, as the central limitation of the work rather than an afterthought.
+
+Keywords
+
+Image-based visual servoing; Occlusion robustness; Skeletonization; Medial axis; Uncertainty-gated control; Intelligent automation; AI-driven vision
